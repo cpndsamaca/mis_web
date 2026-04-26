@@ -1,46 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consejos para una alimentación sana</title>
-    <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FBI Excel: Ciberataque al Sistema Escolar</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="titulo">
-        <h1>
-            Alimentación Saludable
-        </h1><br><br>
-    </div>
-    <div id="introduccion">
-        <h2>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis praesentium tenetur sequi est? Ut numquam, commodi cumque, unde corporis officia ipsam illum, rerum explicabo possimus et error facere similique quis!
-        </h2><br><br>
-    </div>
-    <nav id="navegacion">
-        <div class="contenedor">
-            <div class="menu">  
-                <h1>Frutas</h1><br> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsum esse rem minus facere sapiente!</p>
-                <a href="frutas.html"><img src="imagenes/frutas.png" alt="Frutas"></a>
-            </div>
-            <div class="menu">  
-                <h1>Verduras</h1><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsum esse rem minus facere sapiente!</p>
-                <a href="verduras.html"><img src="imagenes/verduras.png" alt="Verduras"></a>
-            </div>
-            <div class="menu">  
-                <h1>Cereales</h1><br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ipsum esse rem minus facere sapiente!</p>
-                <a href="cereales.html"><img src="imagenes/cereal.png" alt="Cereales"></a>
-            </div>
+  <main class="app">
+    <section class="hero-panel">
+      <div class="screen-art" aria-hidden="true">
+        <div class="monitor">
+          <div class="monitor-bar">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="terminal-lines">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="grid-alert">
+            <b>FBI</b>
+            <b>EXCEL</b>
+            <b>LOCK</b>
+            <b>DATA</b>
+          </div>
         </div>
-    </nav>
-    <br>
-    <footer>
-        <div id="pie">
-            <p><a href="acerca.html">Autoras del Ejercicio Académico</a></p>
+        <div class="keypad">
+          <span>7</span><span>3</span><span>1</span>
+          <span>9</span><span>4</span><span>6</span>
+          <span>8</span><span>2</span><span>5</span>
+          <span class="wide">0</span>
         </div>
-    </footer>
+      </div>
+
+      <div class="mission-brief">
+        <p class="eyebrow">Escape room interactivo</p>
+        <h1>FBI EXCEL: Ciberataque al Sistema Escolar</h1>
+        <p>
+          El sistema del colegio fue hackeado. Las notas y archivos desaparecieron.
+          Solo los agentes FBI EXCEL podran recuperar la base de datos resolviendo
+          10 misiones de Excel antes de que termine el tiempo.
+        </p>
+        <div class="brief-actions">
+          <button class="primary-btn" id="startBtn">Iniciar mision</button>
+          <button class="icon-btn" id="resetBtn" title="Reiniciar juego" aria-label="Reiniciar juego">&#8635;</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-panel" id="gamePanel">
+      <header class="command-bar">
+        <div>
+          <p class="eyebrow">Alerta roja</p>
+          <h2 id="missionTitle">Mision 1: Acceso Inicial</h2>
+        </div>
+        <div class="metrics">
+          <span id="timer">30:00</span>
+          <span id="progressText">0/10 misiones</span>
+        </div>
+      </header>
+
+      <div class="layout">
+        <aside class="side-panel">
+          <h3>Codigos recuperados</h3>
+          <div class="code-slots" id="codeSlots" aria-label="Codigos recuperados"></div>
+          <div class="intel-box">
+            <strong>Pista de la mision</strong>
+            <p id="hintText">Lee la pregunta y elige la funcion correcta.</p>
+          </div>
+          <div class="table-card">
+            <strong>Tabla recuperada</strong>
+            <table>
+              <thead>
+                <tr><th>Valores</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>120</td></tr>
+                <tr><td>80</td></tr>
+                <tr><td>50</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </aside>
+
+        <section class="mission-card">
+          <div class="mission-meta">
+            <span id="sectionLabel">Seccion 1</span>
+            <span id="missionStatus">Sistema bloqueado</span>
+          </div>
+          <h3 id="questionText"></h3>
+          <p class="scenario" id="scenarioText"></p>
+          <div class="options" id="options"></div>
+          <div class="short-answer hidden" id="finalAnswer">
+            <label for="masterKey">Introduce la clave maestra</label>
+            <div class="answer-row">
+              <input id="masterKey" type="text" inputmode="numeric" autocomplete="off" placeholder="Clave de 10 digitos">
+              <button class="primary-btn" id="unlockBtn">Restaurar sistema</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="console">
+        <p id="message">Pulsa iniciar mision para comenzar.</p>
+        <div class="console-actions">
+          <button class="ghost-btn" id="hintBtn">Pista</button>
+          <button class="ghost-btn" id="nextBtn" disabled>Siguiente</button>
+        </div>
+      </footer>
+    </section>
+
+    <section class="victory hidden" id="victoryPanel">
+      <p class="eyebrow">Sistema recuperado</p>
+      <h2>Mision cumplida, agentes FBI EXCEL</h2>
+      <p>
+        Han salvado los archivos del colegio. La base de datos quedo restaurada
+        y el ataque fue detenido.
+      </p>
+      <button class="primary-btn" id="playAgainBtn">Jugar otra vez</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
